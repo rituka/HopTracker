@@ -1,0 +1,24 @@
+== HopTracker
+This small piece of code handles the Integration of Pivotal Tracker and Hoptoad errors.
+
+Its very basic and rude right now. But it enters recent 30 error in pivotal.
+
+To run it call 
+  Hop.recent_errors 
+
+== Setup: 
+Do you setup in config.yml
+
+== Tech:
+
+Adds the hoptoad error id and pivotal story id in a yml file errors.yml. And from here it keeps track of already added stories. Deleting a row from this means that error will be entered again in Pivotal.
+
+Example
+
+config:
+  HOPTOAD_AUTH_TOKEN: '037ac66c884bfe7252efdd9a2714b774d96c2ab9'
+  PIVOTAL_PROJECT_ID: '49185'
+  PIVOTAL_API_TOKEN: '35849c581988d8ee4599ffa851d4ac74'
+
+== TODO:
+1. Remove errors.yml from git and create it automatically at initialize if it does not exist 
