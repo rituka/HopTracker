@@ -3,7 +3,7 @@ require 'net/http'
 require 'uri'
 require "rexml/document"
 require 'yaml'
-class Hop
+class HopTracker
   HOPTOAD_URL = 'http://usmov.hoptoadapp.com/'
 
   PIVOTAL_URL = 'http://www.pivotaltracker.com/services/v2'
@@ -66,7 +66,7 @@ class Hop
   end
   
   def self.recent_errors
-    h = Hop.new
+    h = HopTracker.new
     e = h.errors
     h.post_errors(e)
   end
@@ -89,4 +89,4 @@ end
 
 # run
 
-Hop.recent_errors
+HopTracker.recent_errors
