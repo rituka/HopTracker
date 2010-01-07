@@ -1,0 +1,5 @@
+# Set your configuration here
+config:
+  HOPTOAD_AUTH_TOKEN: '037ac66c884bfe7252efdd9a2714b774d96c2ab9'
+  PIVOTAL_PROJECT_ID: '49185'
+  PIVOTAL_API_TOKEN: '35849c581988d8ee4599ffa851d4ac74'
